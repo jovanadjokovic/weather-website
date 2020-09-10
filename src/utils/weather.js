@@ -6,9 +6,9 @@ const weather = (latitude, longitude, callback) => {
         if (error) {
             callback('Network error', undefined)
         } else if (body.error) {
-               callback('Greska u lokaciji',undefined)
+               callback('Error: Location doesn\'t exist ',undefined)
         } else {
-                callback(undefined, body.current.weather_descriptions[0]+'. trenutno je '+ body.current.temperature +' stepeni, a subjektivni osecaj je '+ body.current.feelslike + ' stepeni')
+                callback(undefined, body.current.weather_descriptions[0]+'. it is '+ body.current.temperature +' degrees, but it feels like '+ body.current.feelslike + ' degrees.')
            }
     })
 }

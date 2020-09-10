@@ -6,7 +6,7 @@ const geocode = (adress, callback) => {
         if (error) {
             callback('Network error', undefined)
         } else if (body.features.length===0) {
-            callback('Lose unet grad',undefined)
+            callback('Error: Location doesn\'t exist.',undefined)
         } else {
                 const data = {
                     latitude: body.features[0].center[1],

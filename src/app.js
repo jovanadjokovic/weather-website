@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('',(req,res) => {
     res.render('index', {
         title: 'Weather app',
-        name: 'Jovanica Pametnica'
+        name: 'Jovana Djokovic'
     })
 
 })
@@ -31,7 +31,7 @@ app.get('',(req,res) => {
 app.get('/about',(req,res) => {
     res.render('about', {
         title:'About me',
-        name: 'Jocka'
+        name: 'Jovana Djokovic'
     })
 
 })
@@ -40,7 +40,7 @@ app.get('/help',(req,res) => {
     res.render('help', {
         title: 'Help',
         message:'This is help page',
-        name: 'Jokica Sljokica'
+        name: 'Jovana Djokovic'
     })
 
 })
@@ -90,7 +90,7 @@ app.get('/help/*', (req,res) => {
     res.render('error', {
         title:'404',
         errorMessage: 'Help article not found',
-        name: 'Joka Sljoka'
+        name: 'Jovana Djokovic'
     })
 })
 
@@ -98,7 +98,7 @@ app.get('*', (req,res) => {
     res.render('error', {
         title: '404',
         errorMessage: 'Page not found',
-        name: 'Joca Skljoca'
+        name: 'Jovana Djokovic'
     })
 
 })
