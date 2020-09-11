@@ -8,7 +8,7 @@ const weather = (latitude, longitude, callback) => {
         } else if (body.error) {
                callback('Error: Location doesn\'t exist ',undefined)
         } else { 
-            callback(undefined, body.current.weather_descriptions[0]+'. it is '+ body.current.temperature +' degrees. It feels like '+ body.current.feelslike + ' degrees. Humidity is '+body.current.humidity+'.' )
+            callback(undefined, body.current.weather_descriptions[0]+'. it is '+ body.current.temperature +' degrees. It feels like '+ body.current.feelslike + ' degrees. Humidity is '+body.current.humidity+'%.' )
            }
     })
 }
