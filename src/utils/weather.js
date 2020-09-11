@@ -7,8 +7,7 @@ const weather = (latitude, longitude, callback) => {
             callback('Network error', undefined)
         } else if (body.error) {
                callback('Error: Location doesn\'t exist ',undefined)
-        } else {
-            console.log(body.current)  
+        } else { 
             callback(undefined, body.current.weather_descriptions[0]+'. it is '+ body.current.temperature +' degrees. It feels like '+ body.current.feelslike + ' degrees. Humidity is '+body.current.humidity+'.' )
            }
     })
